@@ -10,8 +10,8 @@ from telebot.types import Message
 app = Flask(__name__)
 
 # Environment variables
-BOT_TOKEN = os.environ.get('8498286596:AAH96EBV0tmn9JkOW5y9VQLhg_S8-TusqBc')
-ADMIN_ID = int(os.environ.get('6324825537'))
+BOT_TOKEN = os.environ.get('BOT_TOKEN')
+ADMIN_ID = int(os.environ.get('ADMIN_ID'))
 PORT = int(os.environ.get('PORT', 8080))
 
 bot = telebot.TeleBot(BOT_TOKEN)
