@@ -99,7 +99,7 @@ def handle_redeem(message: Message):
         save_data(USERS_FILE, users)
     users[user_id]['pending_redeem'] = True
     save_data(USERS_FILE, users)
-    bot.reply_to(message, "After /redeem Enter Your Account To Activate Premium ⚡️")
+    # No reply sent here, silently wait for user message
 
 @bot.message_handler(commands=['premium'])
 def handle_premium(message: Message):
@@ -312,7 +312,7 @@ def handle_acc(message: Message):
         return
     users[user_id]['pending_confirm'] = True
     save_data(USERS_FILE, users)
-    bot.reply_to(message, "Please Confirm Purchase 🤳")
+    bot.reply_to(message, "Please /Confirm Purchase 🤳")
 
 @bot.message_handler(commands=['confirm'])
 def handle_confirm(message: Message):
